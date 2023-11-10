@@ -1,14 +1,27 @@
 import React from "react";
-import Todo from "./components/Todo";
+import { Route, Switch } from "react-router-dom";
+import AllMeetups from "./pages/AllMeetups";
+import Favourites from "./pages/Favourites";
+import NewMeetups from "./pages/NewMeetup";
+import Layout from "./components/layout/Layout";
 
 function App() {
 	return (
-		<div>
-			<h1>My Todos</h1>
-			<Todo text="Learn react" />
-			<Todo text="Create website" />
-			<Todo text="take tuffy for walk" />
-		</div>
+		<Layout>
+			<Switch>
+				<Route path="/" exact>
+					<AllMeetups />
+				</Route>
+
+				<Route path="/favourites" exact>
+					<Favourites />
+				</Route>
+
+				<Route path="/newmeetup" exact>
+					<NewMeetups />
+				</Route>
+			</Switch>
+		</Layout>
 	);
 }
 
