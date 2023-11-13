@@ -1,17 +1,9 @@
-import Link from "next/link";
+import React from "react";
 
 function HomePage() {
 	return (
 		<div>
-			<h1>The HomePage</h1>
-			<ul>
-				<li>
-					<Link href="/portfolio">Portfolio</Link>
-				</li>
-				<li>
-					<Link href="/clients">Clients</Link>
-				</li>
-			</ul>
+			<h1>Home Page</h1>
 		</div>
 	);
 }
